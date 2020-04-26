@@ -1,5 +1,5 @@
 .app-container {
-  background-color: #fff;
+  background-color:#fc0;
   width: 80%;
   height: 100vh;
   margin: 5% auto;
@@ -11,4 +11,6 @@
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
+  border: solid #333;
+  border-width: 1rem;
 }
