@@ -15,7 +15,7 @@ class Post extends Component{
               <h4>{this.props.city}</h4>
             </div>
             <div className="post-text">
-            <h3>{this.props.title}</h3>
+            <p>{this.props.title}</p>
             </div>
           </div>
       );

@@ -12,7 +12,7 @@ class PostList extends Component{
       return (
         <div className="post-list">
           { this.props.postList.map(post => (
-              <Post title={post.title} description={post.description} city={post.city}></Post>
+              <Post key={post.id} title={post.title} description={post.description} city={post.city}></Post>
           ))}
         </div>
       )

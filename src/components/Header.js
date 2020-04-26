@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 import './Header.scss';
-import Logo from './Logo';
-import Search from './Search';
-import Settings from './Settings';
 
 class Header extends Component{
   
@@ -13,9 +10,15 @@ class Header extends Component{
     render() {
       return (
         <div className="header">
-          <Logo></Logo>
-          <Search></Search>
-          <Settings></Settings>
+          <div className="logo-box">
+            Logo
+          </div>
+          <div className="search-box">
+            <input className="input-box" type="text" placeholder="Search something"></input>
+          </div>
+          <div className="settings-box">
+            Settings
+          </div>
         </div>
       );
     }

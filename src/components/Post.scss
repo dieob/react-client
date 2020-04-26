@@ -1,18 +1,30 @@
 .post-item{
     display: flex;
     width: 95%;
-    padding: 1rem;
-  }
+    padding-bottom: 1rem;
+}
   
   .post-photo{
     width: 25%;
-    background-color: grey;
+    background-color: #ccc;
     align-items: stretch;
+
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 50%;
+    }
   }
   
   .post-text{
-    background-color: white;
     margin-left: 1rem;
     width: 100%;
     padding: 1.5rem;
+    border-bottom:  1px solid rgba(53, 53, 53, 0.35);
+
+    &:hover{
+      background-color: #ccc;
+      cursor: pointer;
+      border-bottom:  1px solid rgba(53, 53, 53, 0);
+    }
   }

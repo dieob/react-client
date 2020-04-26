@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import './Settings.scss';
+import './Create.scss';
 
-class Settings extends Component{
+class Create extends Component{
   
     constructor(props) {
       super(props);
@@ -9,11 +9,11 @@ class Settings extends Component{
   
     render() {
       return (
-        <div className="settings-box">
-          Settings
+        <div className="main-container">
+          CREATE
         </div>
-      );
+      )
     }
 }
 
-export default Settings;
+export default Create;
