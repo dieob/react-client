@@ -1,0 +1,14 @@
+.app-container {
+  background-color: #fff;
+  width: 80%;
+  height: 100vh;
+  margin: 5% auto;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  border-radius: 5px;
+  overflow: hidden;
+  //flexbox
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}

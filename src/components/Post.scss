@@ -1,0 +1,18 @@
+.post-item{
+    display: flex;
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .post-photo{
+    width: 25%;
+    background-color: grey;
+    align-items: stretch;
+  }
+  
+  .post-text{
+    background-color: yellowgreen;
+    margin-left: 1rem;
+    width: 100%;
+    padding: 1.5rem;
+  }
