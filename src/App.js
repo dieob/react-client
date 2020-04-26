@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.scss';
 
-class App extends React.Component{
+class App extends Component{
   
   constructor(props) {
     super(props);
@@ -20,13 +20,13 @@ class App extends React.Component{
       <div className="app-container">
         <Header></Header>
         <Navigation></Navigation>
-        <PostList></PostList>
+        <PostList postList={this.state.posts}></PostList>
       </div>
     );
   }
 }
 
-class Header extends React.Component{
+class Header extends Component{
   
   constructor(props) {
     super(props);
@@ -44,7 +44,7 @@ class Header extends React.Component{
 
 }
 
-class Logo extends React.Component{
+class Logo extends Component{
   
   constructor(props) {
     super(props);
@@ -60,7 +60,7 @@ class Logo extends React.Component{
 
 }
 
-class Search extends React.Component{
+class Search extends Component{
   
   constructor(props) {
     super(props);
@@ -75,7 +75,7 @@ class Search extends React.Component{
   }
 }
 
-class Settings extends React.Component{
+class Settings extends Component{
   
   constructor(props) {
     super(props);
@@ -90,7 +90,7 @@ class Settings extends React.Component{
   }
 }
 
-class Navigation extends React.Component{
+class Navigation extends Component{
   
   constructor(props) {
     super(props);
@@ -110,23 +110,7 @@ class Navigation extends React.Component{
 
 }
 
-class PostList extends React.Component{
-  
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div className="post-list">
-        <h3>posts</h3>
-      </div>
-    );
-  }
-
-}
-
-class Button extends React.Component{
+class Button extends Component{
   
   constructor(props) {
     super(props);
@@ -139,6 +123,46 @@ class Button extends React.Component{
           Post yours
         </div>
       </div>
+    );
+  }
+
+}
+
+class PostList extends Component{
+  
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="post-list">
+        { this.props.postList.map(post => (
+            <Post title={post.title} description={post.description} city={post.city}></Post>
+        ))}
+      </div>
+    )
+  }
+
+}
+
+class Post extends Component{
+  
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+
+    return(
+        <div className="post-item">
+          <div className="post-photo">
+            <h4>{this.props.city}</h4>
+          </div>
+          <div className="post-text">
+          <h3>{this.props.title}</h3>
+          </div>
+        </div>
     );
   }
 
