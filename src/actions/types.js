@@ -1,0 +1,1 @@
+export const FETCH_POST_DATA = 'FETCH_POST_DATA';
