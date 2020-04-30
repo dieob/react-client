@@ -1,1 +1,2 @@
 export const FETCH_POST_DATA = 'FETCH_POST_DATA';
+export const CREATE_POST = 'CREATE_POST';

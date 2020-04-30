@@ -1,13 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './PostList.scss';
 import Post from './Post'
 
 import { connect } from 'react-redux';
+import { fetchPostData } from '../actions';
 
 function PostList({ posts }) {
   console.log("POST COMPONENT");
   console.log(posts)
-  if(!posts) {
+  console.log("POSTS LENGTH");
+  console.log(posts.length);
+
+  if(posts.length === 0) {
     return (
       <div>
         No Data
@@ -24,14 +28,18 @@ function PostList({ posts }) {
 }
 
 const mapStateToProps = state => {
-  console.log("POST MAPSTATE");
-  console.log(state);
   return {
     posts: state.posts
   };
 };
 
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchPosts: () => dispatch(fetchPostData())
+  }
+};
+
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(PostList);
